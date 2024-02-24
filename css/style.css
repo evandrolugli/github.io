@@ -1,0 +1,213 @@
+:root{
+    --white: #ffffff;
+    --gray-100: #e1e1e6;
+    --gray-300: #c4c4cc;
+    --gray-400: #8d8d99;
+    --gray-600: #323238;
+    --gray-700: #29292e;
+    --gray-800: #202024;
+    --gray-900: #121214;
+ 
+    --green-300: #00B37E;
+    --green-500: #00875f;
+
+    --red-500: #F75A68;
+
+    --purple-100: #b491c8;
+    --purple-500: #52307c;
+    --purple-800: #3c1361;
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--gray-800);
+}
+
+h1, h2, p {
+    color: var(--gray-300);
+}
+
+h1 {
+    padding: 1rem 0;
+}
+
+.wrapper {
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.navbar {
+    background-color: var(--gray-800);
+    color: var(--white);
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu li {
+    margin-right: 1rem;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--white);
+    transition: color 0.3s ease-in-out;
+}
+
+.menu a:hover {
+    color: var(--purple-100);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.main-content {
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.bio {
+    line-height: 1.6;
+    padding: 1rem;
+}
+
+.footer {
+    background-color: var(--gray-800);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer social-link {
+    color: var(--white);
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 1rem;
+    transition: transform 0.3s;
+}
+
+.footer social-link:hover {
+    transform: translateY(-5px);
+}
+
+.footer span {
+    display: block;
+    margin-top: 0.25rem;
+}
+
+.footer p {
+    margin-top: 0.5rem;
+}
+
+.resume {
+    background-color: var(--gray-800);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+}
+
+.resume section {
+    max-width: 800px;
+    margin: 1rem auto;
+    padding: 1rem;
+    background-color: var(--white);
+    color: var(--gray-800);
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.25rem;
+}
+
+.resume h2 {
+    color: var(--gray-800);
+}
+
+.resume h2 {
+    border-bottom: 0.05rem solid var(--gray-100);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.resume ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.resume li {
+    margin-bottom: 0.5rem;
+}
+
+.resume a {
+    color: var(--purple-500);
+    text-decoration: none;
+}
+
+.resume a:hover {
+    text-decoration: underline;
+}
+
+.resume contact-info {
+    margin-bottom: 1rem;
+}
+
+.resume employment-history, qualifications {
+    margin-bottom: 2rem;
+}
+
+.resume key-skills {
+    margin-bottom: 1rem;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 400px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: var(--gray-800);
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        box-shadow: 0px 0.025rem 0.5rem rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .menu show {
+        display: flex;
+    }
+
+    .menu li {
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .social-link {
+        display: block;
+        margin: 0.5rem auto;
+    }
+}
