@@ -10,18 +10,25 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-
     const mobileMenuButton = document.getElementById('mobile-menu');
     const menuList = document.getElementById('menu');
+    const mainContent = document.getElementById('main-content');
 
     mobileMenuButton.addEventListener('click', function () {
+        console.log('oi')
         menuList.classList.toggle('show');
+        mainContent.classList.toggle('menu-open');
     });
 });
 
 function loadContent(url) {
     fetch(url)
-        .then(response => response.text())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.text();
+        })
         .then(data => {
             document.getElementById("main-content").innerHTML = data;
         })

@@ -98,7 +98,6 @@ h1 {
     margin: 1rem;
 }
 
-
 /* Footer Component */
 
 .footer {
@@ -255,9 +254,10 @@ h1 {
         left: 0;
         box-shadow: 0px 0.025rem 0.5rem rgba(0, 0, 0, 0.1);
         text-align: center;
+        transition: transform 0.3s ease-in-out;
     }
 
-    .menu show {
+    .menu.show {
         display: flex;
     }
 
@@ -273,5 +273,9 @@ h1 {
     .social-link {
         display: block;
         margin: 0.5rem auto;
+    }
+
+    .main-content.menu-open {
+        margin-top: 8rem;
     }
 }
