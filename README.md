@@ -1,2 +1,6 @@
-# github.io
-Portfolio
+# Technology
+- javascript
+- css
+
+# Coding
+- run: 'Go Live'
